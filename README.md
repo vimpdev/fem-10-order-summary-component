@@ -41,7 +41,7 @@ Users should be able to:
 ## Links
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-10-order-summary-component/)
-<!-- - 👩‍💻 [View solution on Frontend Mentor]() -->
+- 👩‍💻 [View solution on Frontend Mentor](https://www.frontendmentor.io/solutions/order-summary-card-modern-css-with-layer-and-native-nesting-IujFZpT4S6)
 
 ---
 
