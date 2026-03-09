@@ -1,0 +1,215 @@
+@layer reset, fonts, tokens, base, components;
+
+@import url('./reset.css') layer(reset);
+@import url('./fonts.css') layer(fonts);
+
+@layer tokens {
+  :root {
+    --blue-100: hsl(225, 100%, 94%);
+    --blue-700: hsl(245, 75%, 52%);
+    --blue-600: hsl(228, 87%, 40%);
+    --blue-50: hsl(225, 100%, 98%);
+    --gray-600: hsl(224, 19%, 48%);
+    --blue-950: hsl(223, 47%, 23%);
+    --purple-500: hsl(245, 83%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --ff-base: 'Red Hat Display', sans-serif;
+    --radius-s: 11px;
+    --radius-m: 20px;
+  }
+}
+
+@layer base {
+  body {
+    min-block-size: 100dvh;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-base);
+    font-size: 1rem;
+    background: url('./../assets/images/pattern-background-mobile.svg') no-repeat center top / contain var(--blue-100);
+    color: var(--blue-950);
+
+    @media (width >=48rem) {
+      background-image: url('./../assets/images/pattern-background-desktop.svg');
+    }
+  }
+
+  :focus-visible {
+    outline: 2px dotted var(--clr-focus);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .card {
+    inline-size: clamp(20.4375rem, 87.2vw, 28.125rem);
+    margin-top: 4.6875rem;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: var(--radius-m);
+    box-shadow: 0 40px 40px -20px hsl(from var(--blue-600) h s l/.15);
+    overflow: hidden;
+  }
+
+  .card__media {
+    block-size: clamp(10rem, 42.65vw, 13.75rem);
+    background: url('./../assets/images/illustration-hero.svg') no-repeat center / cover;
+  }
+
+  .card__content {
+    padding: 2rem 1.5rem 1rem;
+
+    h1 {
+      font-size: clamp(1.375rem, .9rem + 2vw, 1.75rem);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: clamp(.9375rem, .5rem + 1.86vw, 1rem);
+      font-weight: 500;
+      letter-spacing: .18px;
+      line-height: 1.62;
+      color: var(--gray-600);
+    }
+
+    @media (width >=48rem) {
+      padding: 2.85rem 3rem 2rem;
+    }
+  }
+
+  .card__actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    @media (width >=48rem) {
+      margin-top: 1.95rem;
+      gap: 1.05rem;
+    }
+  }
+
+  .plan {
+    margin-top: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(.9375rem, .5rem + 1.86vw, 1rem);
+    background-color: var(--blue-50);
+    border-radius: var(--radius-s);
+
+    a {
+      --clr-focus: var(--purple-500);
+
+      margin-left: auto;
+      font-size: .9375rem;
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: var(--blue-700);
+      letter-spacing: -.5px;
+      transition: color .25s ease-in-out;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--clr-focus);
+        text-decoration: none;
+      }
+    }
+
+    @media (width >=48rem) {
+      padding: 1.45rem 1.5rem;
+      gap: 1.25rem;
+    }
+  }
+
+  .plan__info {
+    line-height: 1.65;
+
+    dt {
+      font-weight: 900;
+    }
+
+    dd {
+      font-weight: 500;
+      color: var(--gray-600);
+      letter-spacing: .3px;
+    }
+  }
+
+  .btn {
+    padding-block: .8rem;
+    inline-size: 100%;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.65;
+    border: none;
+    border-radius: var(--radius-s);
+    cursor: pointer;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+  }
+
+  .btn--primary {
+    --clr-focus: var(--purple-500);
+
+    background-color: var(--blue-700);
+    color: var(--white);
+    box-shadow: 0 20px 20px hsl(from var(--blue-700) h s l/.19);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--clr-focus);
+    }
+  }
+
+  .btn--secondary {
+    --clr-focus: var(--blue-950);
+
+    background-color: transparent;
+    color: var(--gray-600);
+
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-focus);
+    }
+  }
+
+  .attribution {
+    padding: 2rem 0 1.5rem;
+    font-size: .9rem;
+    font-weight: 600;
+    text-align: center;
+
+    a {
+      margin-inline: .25rem;
+      font-weight: 800;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -2px;
+        right: 0;
+        inline-size: 100%;
+        block-size: 2px;
+        background-color: currentColor;
+        transition: inline-size .25s ease-in-out;
+      }
+
+      &:hover::after,
+      &:focus-visible::after {
+        inline-size: 0;
+      }
+
+      &:hover,
+      &:focus-visible {
+        --clr-focus: var(--blue-600);
+        color: var(--clr-focus);
+      }
+    }
+  }
+}
