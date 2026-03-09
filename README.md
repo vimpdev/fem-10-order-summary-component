@@ -1,121 +1,121 @@
-# Frontend Mentor - Order summary card solution
+# 🚀 Frontend Mentor - Order summary card solution
 
 This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Table of contents
+---
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+## 🎬 Demo
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+![Animated preview demonstrating the responsive layout and interaction states](./docs/demo.gif)
 
-## Overview
+---
 
-### The challenge
+## 🎯 The challenge
 
 Users should be able to:
 
 - See hover states for interactive elements
 
-### Screenshot
+---
 
-![](./screenshot.jpg)
+## 📸 Screenshots
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+### 📱 Mobile
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![Mobile layout of order summary component](./docs/mobile-default.avif)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+### 📲 Tablet
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Tablet layout of order summary component](./docs/tablet-default.avif)
 
-### Links
+### 🖥️ Desktop
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+![Desktop layout of order summary component](./docs/desktop-default.avif)
 
-## My process
+### 🖥️ Desktop interaction &ndash; `:hover` & `:focus-visible`
 
-### Built with
+![This screenshot highlights the hover and focus-visible states for links and buttons](./docs/desktop-interaction.avif)
 
-- Semantic HTML5 markup
+---
+
+## Links
+
+- 🌎 [Live site](https://vimpdev.github.io/fem-10-order-summary-component/)
+<!-- - 👩‍💻 [View solution on Frontend Mentor]() -->
+
+---
+
+## 🛠️ Built with
+
+- Semantic HTML5
+- Mobile-first workflow
+- Modern CSS
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- `@layer` for style architecture
+- Native CSS Nesting
+- Responsive design
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
-### What I learned
+## ♿ Accessibility improvements
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Accessibility was an important focus in this project.
 
-To see how you can add code snippets, see below:
+- Adjusted a color that triggered contrast warnings in accessibility tools
+- Verified accessibility using **Lighthouse** and **WAVE**
+- Added focus-visible states for interactive elements
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+---
+
+## 🧠 What I learned
+
+This project helped reinforce several modern CSS techniques and accessibility practices.
+
+### 📌 Using `@layer` to organize CSS
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@layer reset, base, components, utilities;
+```
+This allows better control over **style cascade** and **architecture**.
+
+### 📌 Native CSS nesting
+```css
+.button {
+  background: var(--primary);
+
+  &:hover {
+    opacity: .9;
+  }
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+Native nesting improves **readability** and **maintainability**.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+---
 
-### Continued development
+## 📚 Useful resources
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- 📰 [Regla `@layer` en CSS](https://lenguajecss.com/cascada-css/especificidad/regla-layer/)  by ManzDev.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- 📺 [CSS `@layer`](https://youtu.be/NDNRGW-_1EE) by Kevin Powell.
 
-### Useful resources
+---
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+## 🤖 AI Collaboration
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+AI was used as a **technical assistant and reviewer**, not as an automatic generator.
 
-### AI Collaboration
+- Reviewing semantic HTML structure
+- Improving accessibility practices
+- Refining metadata (SEO, Open Graph, Twitter cards)
+- Improving README documentation
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+AI acted as a technical reviewer and brainstorming partner, while the implementation and decisions remained manual.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+---
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+## 👤 Author
 
-## Author
+- Frontend Mentor – [@vimpdev](https://www.frontendmentor.io/profile/vimpdev)
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+---
